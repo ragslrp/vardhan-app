@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover and play amazing games from Vardhan Apps. Enjoy puzzles, word games, and more!">
+  <title>Vardhan Apps - Play Fun Mobile Games</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <span>🎮</span>
+        <span>Vardhan Apps</span>
+      </div>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#numbee" class="nav-link">Numbee</a></li>
+          <li><a href="#magic-square" class="nav-link">Magic Square</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Games Showcase Section -->
+    <section id="games-showcase">
+      <div class="games-showcase">
+        <h2>Our Mobile Games</h2>
+        <p>Download our exciting apps from Google Play Store</p>
+
+        <div class="games-grid">
+          <div class="game-card">
+            <div class="game-icon">
+              <img src="images/numbee/icon.png" alt="Numbee Game Icon" class="game-icon-image">
+            </div>
+            <div class="game-info">
+              <h3>🔢 Numbee</h3>
+              <p>Arrange numbers in order while racing against time!</p>
+              <a href="https://play.google.com/store/apps/details?id=com.rags" target="_blank" class="google-play-btn">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="google-play-badge">
+              </a>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div class="game-icon">
+              <img src="images/magic-square/icon.png" alt="Magic Square Game Icon" class="game-icon-image">
+            </div>
+            <div class="game-info">
+              <h3>✨ Magic Square</h3>
+              <p>Test your logic with the classic magic square challenge!</p>
+              <a href="https://play.google.com/store/apps/details?id=com.rags.magicsquare" target="_blank" class="google-play-btn">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="google-play-badge">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Details -->
+    <section id="game-details">
+      <!-- Game details will be loaded here -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <h3>About Games</h3>
+      <p>We create fun and engaging mobile games that challenge your mind and provide hours of entertainment. Our games are designed to be easy to learn but hard to master, perfect for players of all ages.</p>
+
+      <div class="winners-section">
+        <h3>Daily Winners</h3>
+        <p>Check out the top performers from our games! Select a date to view daily winners for each app.</p>
+
+        <!-- Date Navigation -->
+        <div class="date-navigation">
+          <label for="winner-date">Select Date:</label>
+          <input type="date" id="winner-date" class="date-picker">
+        </div>
+
+        <!-- App Tabs -->
+        <div class="app-tabs">
+          <button class="tab-btn active" data-app="numbee">🔢 Numbee Winners</button>
+          <button class="tab-btn" data-app="magic-square">✨ Magic Square Winners</button>
+        </div>
+
+        <!-- Winners Content -->
+        <div id="numbee-winners" class="app-winners active">
+          <h4>Numbee Daily Winners </h4>
+          <div class="winners-by-date" id="numbee-winners-by-date">
+            <!-- Numbee winners for current date will be loaded by JavaScript -->
+          </div>
+        </div>
+
+        <div id="magic-square-winners" class="app-winners">
+          <h4>Magic Square Daily Winners </h4>
+          <div class="winners-by-date" id="magic-square-winners-by-date">
+            <!-- Magic Square winners for current date will be loaded by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Vardhan Apps. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="terms.html" class="footer-link">Terms & Conditions</a>
+          <span class="footer-separator">|</span>
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <span class="footer-separator">|</span>
+          <a href="#feedback" class="footer-link">Send Feedback</a>
+        </div>
+        <div class="social-links" style="margin-top: 1rem;">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter" style="margin: 0 1rem;"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
