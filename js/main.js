@@ -14,7 +14,8 @@ const games = [
     screenshots: [
       'images/numbee/screenshot1.png',
       'images/numbee/screenshot2.png',
-      'images/numbee/screenshot3.png'
+      'images/numbee/screenshot3.png',
+      'images/numbee/screenshot4.png'
     ],
     icon: 'images/numbee/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.rags&hl=en_IN',
@@ -33,8 +34,10 @@ const games = [
     ],
     screenshots: [
       'images/magic-square/screenshot1.png',
-      'images/magic-square/screenshot1.png',
-      'images/magic-square/screenshot1.png'
+      'images/magic-square/screenshot2.png',
+      'images/magic-square/screenshot3.png',
+      'images/magic-square/screenshot4.png',
+      'images/magic-square/screenshot5.png'
     ],
     icon: 'images/magic-square/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.rags.magicsquare&hl=en_IN',
