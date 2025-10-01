@@ -886,6 +886,7 @@ footer {
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
+    margin-left: auto;
   }
 
   .nav-menu {
