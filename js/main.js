@@ -6,10 +6,10 @@ const games = [
     description: 'A fun and challenging number puzzle game to test your skills. Arrange numbers in order while racing against time! Perfect for all ages who enjoy brain-teasing puzzles.',
     summary: 'Arrange numbers in order while racing against time!',
     features: [
-      'Multiple difficulty levels',
-      'Smooth and intuitive controls',
-      'Track your best times',
-      'Beautiful minimalist design'
+      'Multiple difficulty levels (3x3, 4x4, 5x5, 6x6)',
+      'Built-in timer to track your best scores',
+      'Play offline anytime – no internet required',
+      'Clean & modern design'
     ],
     screenshots: [
       'images/numbee/screenshot1.png',
@@ -28,9 +28,10 @@ const games = [
     summary: 'Test your logic with the classic magic square challenge!',
     features: [
       'Multiple grid sizes (3x3, 4x4, 5x5)',
-      'Hint system for when you\'re stuck',
-      'Track your progress and stats',
-      'Minimalist and distraction-free interface'
+      'Clear, simple design focused on the puzzle',
+      'No time limits or distractions',
+      'No internet needed, play anytime, anywhere'
+      
     ],
     screenshots: [
       'images/magic-square/screenshot1.png',
