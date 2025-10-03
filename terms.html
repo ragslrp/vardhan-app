@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Conditions - Vardhan Apps</title>
-    <meta name="description" content="Terms & Conditions for Vardhan Apps - Legal terms and conditions for using our mobile apps and services.">
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.vardhan.app/terms.html">
@@ -16,23 +14,33 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:secure_url" content="https://www.vardhan.app/images/website-icon.png">
-
+    <meta property="og:image:alt" content="Vardhan Apps Logo">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.vardhan.app/terms.html">
     <meta property="twitter:title" content="Terms & Conditions - Vardhan Apps">
     <meta property="twitter:description" content="Terms & Conditions for Vardhan Apps - Legal terms and conditions for using our mobile apps and services.">
     <meta property="twitter:image" content="https://www.vardhan.app/images/website-icon.png">
-    <meta property="twitter:image:alt" content="Vardhan Apps Logo">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+<style>
+  /* Force hamburger menu to show on mobile devices */
+  @media (max-width: 1024px) {
+    .nav-toggle {
+      display: block !important;
+      margin-left: auto;
+      background: rgba(255, 255, 255, 0.15) !important;
+      border: 2px solid rgba(255, 255, 255, 0.3) !important;
+      border-radius: 8px !important;
+      padding: 0.75rem !important;
+    }
+  }
+</style>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html" class="logo-link" onclick="if(window.location.pathname.includes('terms.html') || window.location.pathname.includes('privacy.html')) { window.location.href = 'index.html'; return false; }">
+                <a href="index.html" class="logo-link">
                     <img src="images/website-icon.png" alt="Vardhan Apps Logo" class="logo-icon">
                     <span>Vardhan Apps</span>
                 </a>
@@ -158,9 +166,9 @@
             <div class="footer-content">
                 <p>&copy; 2025 Vardhan Apps. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="index.html" class="footer-link">Terms & Conditions</a>
+                    <a href="terms.html" class="footer-link">Terms & Conditions</a>
                     <span class="footer-separator">|</span>
-                    <a href="index.html" class="footer-link">Privacy Policy</a>
+                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
                     <span class="footer-separator">|</span>
                     <a href="#feedback" class="footer-link">Send Feedback</a>
                 </div>

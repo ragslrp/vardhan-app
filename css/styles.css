@@ -49,6 +49,11 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .logo-link {
@@ -83,7 +88,25 @@ header .container {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  display: none;
+  display: none; /* Hidden by default on desktop */
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1001;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
+
+.nav-toggle i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .nav-menu {
@@ -1311,6 +1334,48 @@ footer {
 
   .legal-contact {
     padding: 1.5rem;
+  }
+
+  /* Hamburger menu styles for legal pages */
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(74, 107, 255, 0.1);
+    color: var(--primary-color);
   }
 }
 
