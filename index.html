@@ -31,13 +31,24 @@
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="shortcut icon" href="favicon/favicon.ico">
   
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Force hamburger menu to show on mobile devices */
+  @media (max-width: 1024px) {
+    .nav-toggle {
+      display: block !important;
+      margin-left: auto;
+      background: rgba(255, 255, 255, 0.15) !important;
+      border: 2px solid rgba(255, 255, 255, 0.3) !important;
+      border-radius: 8px !important;
+      padding: 0.75rem !important;
+    }
+  }
+</style>
   
   <!-- Additional Social Media Optimization -->
   <meta name="theme-color" content="#4f46e5">
@@ -62,10 +73,10 @@
   </script>
 <body>
   <!-- Header -->
-  <header>
+  <header class="header">
     <div class="container">
       <div class="logo">
-        <a href="index.html" class="logo-link" onclick="if(window.location.pathname.includes('terms.html') || window.location.pathname.includes('privacy.html')) { window.location.href = 'index.html'; return false; }">
+        <a href="index.html" class="logo-link">
           <img src="images/website-icon.png" alt="Vardhan Apps Logo" class="logo-icon">
           <span>Vardhan Apps</span>
         </a>
