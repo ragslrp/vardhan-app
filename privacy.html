@@ -13,10 +13,14 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html" class="logo-link" onclick="if(window.location.pathname.includes('terms.html') || window.location.pathname.includes('privacy.html')) { window.location.href = 'index.html'; return false; }">
-                    <span>🎮</span>
+                    <img src="images/website-icon.png" alt="Vardhan Apps Logo" class="logo-icon">
                     <span>Vardhan Apps</span>
                 </a>
             </div>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
 
             <nav>
                 <ul class="nav-menu">
@@ -100,7 +104,26 @@
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
+    <script>
+        // Mobile navigation toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
 </html>
