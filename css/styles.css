@@ -3,6 +3,7 @@
   --primary-color: #4a6bff;
   --secondary-color: #6c5ce7;
   --text-color: #2d3436;
+  --text-muted: #636e72;
   --light-text: #636e72;
   --light-bg: #f8f9fa;
   --white: #ffffff;
@@ -10,7 +11,7 @@
   --transition: all 0.3s ease;
   --border-radius: 8px;
   --container-width: 1200px;
-}
+} 
 
 * {
   margin: 0;
@@ -284,6 +285,16 @@ main {
   color: var(--light-text);
   margin-bottom: 2rem;
   line-height: 1.6;
+  text-align: justify;
+  font-size: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+  background: rgba(74, 107, 255, 0.05);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--primary-color);
+  border-right: 3px solid var(--primary-color);
 }
 
 .google-play-btn {
@@ -425,7 +436,7 @@ main {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  margin-top: 3rem; /* Add space between header and game details for cleaner UI */
+  margin-top: 2rem;
   opacity: 1;
   transition: opacity 0.3s ease;
   width: 100%;
@@ -446,13 +457,16 @@ main {
 .game-details h1 {
   margin: 0 0 0.5rem 0;
   font-size: 2rem;
-  color: white;
+  color: var(--text-color);
+  font-weight: 700;
 }
 
 .game-details .game-description {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-color);
   margin-bottom: 1.5rem;
   max-width: 800px;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .game-meta {
@@ -481,7 +495,7 @@ main {
 
 .rating .rating-text {
   font-weight: 600;
-  color: white;
+  color: var(--text-color);
   font-size: 1rem;
 }
 
@@ -542,8 +556,8 @@ main {
 /* Screenshots Gallery */
 .screenshots-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 1rem;
   justify-items: center;
 }
@@ -568,7 +582,7 @@ main {
 
 .screenshot img {
   max-width: 100%;
-  max-height: 400px;
+  max-height: 450px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -899,10 +913,30 @@ footer {
     flex-direction: column;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
   }
 
   .nav-menu.active {
     display: flex;
+  }
+
+  .nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(74, 107, 255, 0.1);
+    color: var(--primary-color);
   }
 
   .app-tabs {
@@ -928,22 +962,60 @@ footer {
     display: none;
   }
 
-  /* Game Details responsive layout for small devices */
-  .game-meta {
-    flex-direction: column;
-    align-items: center;
+  /* Game Details mobile responsive styling for light mode */
+  .game-details {
+    margin: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .game-details h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+  }
+
+  .game-details .game-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .game-content {
+    padding: 1.5rem;
+  }
+
+  .features-section h2,
+  .screenshots-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .features-list li {
+    padding: 0.75rem;
+  }
+
+  .screenshots-gallery {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .game-meta .google-play-btn {
-    align-self: center;
+  .screenshot img {
+    max-height: 320px;
   }
 
-  .date-picker {
-    width: 100%;
-    max-width: 200px;
-    margin-left: 0;
-    margin-top: 0.5rem;
+  .winners-section {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .winners-section h2 {
+    font-size: 1.2rem;
   }
 
   /* Screenshots responsive design */
@@ -959,7 +1031,7 @@ footer {
   }
 
   .screenshot img {
-    max-height: 300px;
+    max-height: 380px;
   }
 
   /* Mobile padding adjustments */

@@ -12,8 +12,10 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <span>🎮</span>
-                <span>Vardhan Apps</span>
+                <a href="index.html" class="logo-link" onclick="if(window.location.pathname.includes('terms.html') || window.location.pathname.includes('privacy.html')) { window.location.href = 'index.html'; return false; }">
+                    <span>🎮</span>
+                    <span>Vardhan Apps</span>
+                </a>
             </div>
 
             <nav>
@@ -86,9 +88,9 @@
             <div class="footer-content">
                 <p>&copy; 2025 Vardhan Apps. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="terms.html" class="footer-link">Terms & Conditions</a>
+                    <a href="index.html" class="footer-link">Terms & Conditions</a>
                     <span class="footer-separator">|</span>
-                    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="index.html" class="footer-link">Privacy Policy</a>
                     <span class="footer-separator">|</span>
                     <a href="#feedback" class="footer-link">Send Feedback</a>
                 </div>
