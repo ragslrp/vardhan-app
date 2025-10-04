@@ -12,7 +12,7 @@
   <meta property="og:title" content="Vardhan Apps – Your Ultimate Mobile App and Game Hub!">
   <meta property="og:description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
   <meta property="og:image" content="https://www.vardhan.app/images/website-icon.png">
-  <!-- Essential WhatsApp Mobile Meta Tags - Clean Implementation -->
+  <!-- Essential WhatsApp Mobile Meta Tags - Multiple Hosting Fallbacks -->
   <meta property="og:title" content="Vardhan Apps – Your Ultimate Mobile App and Game Hub!">
   <meta property="og:description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
   <meta property="og:url" content="https://www.vardhan.app/">
@@ -20,12 +20,13 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
 
-  <!-- Primary Image for WhatsApp Mobile -->
-  <meta property="og:image" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
+  <!-- Primary Image for WhatsApp Mobile - Multiple Sources -->
+  <meta property="og:image" content="https://www.vardhan.app/images/website-icon.png?v=2.0">
+  <meta property="og:image" content="images/website-icon.png?v=2.0">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:secure_url" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
+  <meta property="og:image:secure_url" content="https://www.vardhan.app/images/website-icon.png?v=2.0">
   <meta property="og:image:alt" content="Vardhan Apps Logo">
 
   <!-- Twitter Card for WhatsApp Mobile Compatibility -->
@@ -33,14 +34,17 @@
   <meta name="twitter:site" content="@VardhanApps">
   <meta name="twitter:title" content="Vardhan Apps – Your Ultimate Mobile App and Game Hub!">
   <meta name="twitter:description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
-  <meta name="twitter:image" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
+  <meta name="twitter:image" content="https://www.vardhan.app/images/website-icon.png?v=2.0">
+  <meta name="twitter:image" content="images/website-icon.png?v=2.0">
   <meta name="twitter:image:width" content="1200">
   <meta name="twitter:image:height" content="630">
   <meta name="twitter:image:alt" content="Vardhan Apps Logo">
 
   <!-- Multiple Fallback Image Sources for Mobile WhatsApp -->
-  <link rel="image_src" href="https://www.vardhan.app/images/website-icon.png?v=1.4">
-  <meta name="og:image:url" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
+  <link rel="image_src" href="https://www.vardhan.app/images/website-icon.png?v=2.0">
+  <link rel="image_src" href="images/website-icon.png?v=2.0">
+  <meta name="og:image:url" content="https://www.vardhan.app/images/website-icon.png?v=2.0">
+  <meta name="og:image:url" content="images/website-icon.png?v=2.0">
 
   <!-- Mobile WhatsApp Optimization -->
   <meta name="format-detection" content="telephone=no">
@@ -92,7 +96,7 @@
     "@type": "Organization",
     "name": "Vardhan Apps",
     "url": "https://www.vardhan.app/",
-    "logo": "https://www.vardhan.app/images/website-icon.png?v=1.4",
+    "logo": "https://www.vardhan.app/images/website-icon.png?v=2.0",
     "description": "Your Ultimate Mobile App and Game Hub! Explore fun mobile apps, challenge yourself, and unlock exciting rewards!",
     "sameAs": [
       "https://play.google.com/store/apps/dev?id=7189142038513427107"
@@ -231,44 +235,56 @@
   <!-- JavaScript -->
   <script src="js/main.js"></script>
   <script>
-    // WhatsApp sharing debugging function - Enhanced for Mobile
+    // WhatsApp sharing debugging function - Enhanced with Multiple Fallbacks
     function debugWhatsAppSharing() {
-      console.log('🔍 WhatsApp Mobile Debug Info:');
+      console.log('🔍 WhatsApp Mobile Debug Info - Multiple Sources:');
       console.log('📱 Mobile & Desktop Meta Tags:');
-      console.log('OG Image URL:', document.querySelector('meta[property="og:image:secure_url"]')?.content);
-      console.log('Twitter Image:', document.querySelector('meta[name="twitter:image"]')?.content);
-      console.log('Image Source Link:', document.querySelector('link[rel="image_src"]')?.href);
-      console.log('Current Version:', document.querySelector('meta[property="og:image:secure_url"]')?.content.split('v=')[1]);
+      console.log('OG Image URLs:', [
+        document.querySelectorAll('meta[property="og:image"]').length + ' sources found'
+      ]);
+      console.log('Twitter Image URLs:', [
+        document.querySelectorAll('meta[name="twitter:image"]').length + ' sources found'
+      ]);
+      console.log('Image Source Links:', [
+        document.querySelectorAll('link[rel="image_src"]').length + ' sources found'
+      ]);
+      console.log('Current Version: v=2.0 (multiple fallbacks)');
       console.log('Current URL:', window.location.href);
       console.log('User Agent:', navigator.userAgent);
       console.log('Screen Size:', window.screen.width + 'x' + window.screen.height);
       console.log('Viewport Size:', window.innerWidth + 'x' + window.innerHeight);
 
-      // Test image loading
-      const img = new Image();
-      img.onload = () => console.log('✅ OG Image loads successfully');
-      img.onerror = () => console.log('❌ OG Image failed to load');
-      img.src = document.querySelector('meta[property="og:image:secure_url"]')?.content;
+      // Test image loading from multiple sources
+      const imageUrls = [
+        'https://www.vardhan.app/images/website-icon.png?v=2.0',
+        'images/website-icon.png?v=2.0'
+      ];
+
+      imageUrls.forEach((url, index) => {
+        const img = new Image();
+        img.onload = () => console.log(`✅ Image ${index + 1} loads successfully:`, url);
+        img.onerror = () => console.log(`❌ Image ${index + 1} failed to load:`, url);
+        img.src = url;
+      });
 
       // Check for mobile-specific issues
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       if (isMobile) {
-        console.log('📱 Mobile Device Detected - Comprehensive Check:');
-        console.log('✅ Image dimensions: 1200x630 (optimal for mobile WhatsApp)');
-        console.log('✅ Multiple meta tags for compatibility: og:image, twitter:image, image_src');
-        console.log('✅ Cache busting with version: v=1.4');
-        console.log('✅ Mobile optimization tags: HandheldFriendly, MobileOptimized');
-        console.log('✅ All essential meta tags present: title, description, url, type');
+        console.log('📱 Mobile Device Detected - Multiple Fallback Check:');
+        console.log('✅ Multiple image sources for redundancy');
+        console.log('✅ Both absolute and relative URLs provided');
+        console.log('✅ Cache busting with version: v=2.0');
+        console.log('✅ Mobile optimization tags present');
+        console.log('✅ All essential meta tags duplicated for compatibility');
       }
 
-      console.log('💡 Mobile WhatsApp Troubleshooting:');
-      console.log('1. Clear WhatsApp cache if image not updating');
-      console.log('2. Use WhatsApp Web debugger: https://developers.facebook.com/tools/debug/');
-      console.log('3. Test on actual mobile device for accurate preview');
-      console.log('4. Check if image is accessible at the URL');
-      console.log('5. Ensure image meets minimum size requirements (600x315 for mobile)');
+      console.log('🚨 If still not working, try these solutions:');
+      console.log('1. Use a different image hosting service (Imgur, GitHub, etc.)');
+      console.log('2. Check if vardhan.app domain is accessible to WhatsApp crawlers');
+      console.log('3. Temporarily use a placeholder image from a reliable CDN');
+      console.log('4. Test with eenadu.net working pattern as reference');
 
-      return '✅ Debug info logged to console. Open browser dev tools (F12) to see details.';
+      return '✅ Debug info logged. Check console for detailed results.';
     }
 
     // Make debug function available globally
