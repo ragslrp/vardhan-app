@@ -40,11 +40,13 @@
   <meta name="twitter:image:height" content="630">
   <meta name="twitter:image:alt" content="Vardhan Apps Logo">
 
-  <!-- Multiple Fallback Image Sources for Mobile WhatsApp -->
   <link rel="image_src" href="https://via.placeholder.com/1200x630/4f46e5/ffffff?text=Vardhan+Apps">
   <link rel="image_src" href="https://www.vardhan.app/images/website-icon.png?v=3.0">
   <meta name="og:image:url" content="https://via.placeholder.com/1200x630/4f46e5/ffffff?text=Vardhan+Apps">
   <meta name="og:image:url" content="https://www.vardhan.app/images/website-icon.png?v=3.0">
+
+  <!-- Facebook App ID for WhatsApp Sharing -->
+  <meta property="fb:app_id" content="1234567890123456">
 
   <!-- Mobile WhatsApp Optimization -->
   <meta name="format-detection" content="telephone=no">
@@ -272,13 +274,13 @@
         console.log('✅ Fallback: vardhan.app image (local hosting)');
         console.log('✅ Multiple redundant sources for maximum compatibility');
         console.log('✅ Proper image dimensions: 1200x630');
+        console.log('✅ Facebook App ID: Present for WhatsApp sharing');
       }
 
-      console.log('🚨 GitHub Hosting Issues (if you were using it):');
-      console.log('❌ GitHub has rate limits that block WhatsApp crawlers');
-      console.log('❌ GitHub may block hotlinking from social media bots');
-      console.log('❌ GitHub CORS policies can interfere with image loading');
-      console.log('✅ Use CDN services or dedicated image hosts instead');
+      console.log('📋 Facebook App ID Status:');
+      console.log('✅ fb:app_id property added: 1234567890123456');
+      console.log('ℹ️  Note: Replace with your actual Facebook App ID for production');
+      console.log('🔗  Get Facebook App ID: https://developers.facebook.com/apps/');
 
       return '✅ Debug info logged. Check console for image loading results.';
     }
