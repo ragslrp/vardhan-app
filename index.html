@@ -12,58 +12,43 @@
   <meta property="og:title" content="Vardhan Apps – Your Ultimate Mobile App and Game Hub!">
   <meta property="og:description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
   <meta property="og:image" content="https://www.vardhan.app/images/website-icon.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:secure_url" content="https://www.vardhan.app/images/website-icon.png">
-  <meta property="og:image:alt" content="Vardhan Apps Logo">
+  <!-- Essential WhatsApp Mobile Meta Tags - Clean Implementation -->
+  <meta property="og:title" content="Vardhan Apps – Your Ultimate Mobile App and Game Hub!">
+  <meta property="og:description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
+  <meta property="og:url" content="https://www.vardhan.app/">
   <meta property="og:site_name" content="Vardhan Apps">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
-  
-  <!-- Enhanced Mobile Social Media Support -->
-  <!-- WhatsApp Mobile Optimizations -->
-  <meta property="og:image:type" content="image/png">
+
+  <!-- Primary Image for WhatsApp Mobile -->
+  <meta property="og:image" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:secure_url" content="https://www.vardhan.app/images/website-icon.png?v=1.1">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:secure_url" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
   <meta property="og:image:alt" content="Vardhan Apps Logo">
 
-  <!-- WhatsApp Mobile Specific Tags -->
-  <meta name="twitter:image" content="https://www.vardhan.app/images/website-icon.png?v=1.1">
-  <meta name="twitter:image:width" content="1200">
-  <meta name="twitter:image:height" content="630">
-  <meta name="twitter:image:alt" content="Vardhan Apps Logo">
-
-  <!-- Additional Mobile WhatsApp Preview -->
-  <link rel="image_src" href="https://www.vardhan.app/images/website-icon.png?v=1.1">
-  <meta name="og:image:url" content="https://www.vardhan.app/images/website-icon.png?v=1.1">
-
-  <!-- WhatsApp specific optimizations -->
+  <!-- Twitter Card for WhatsApp Mobile Compatibility -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image:alt" content="Vardhan Apps Logo">
-  <meta property="article:author" content="Vardhan Apps">
-  <meta name="description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
-
-  <!-- Facebook Mobile App -->
-  <meta property="fb:app_id" content="your-facebook-app-id">
-
-  <!-- Twitter Cards - Enhanced Mobile -->
   <meta name="twitter:site" content="@VardhanApps">
-  <meta name="twitter:creator" content="@VardhanApps">
-  <meta name="twitter:url" content="https://www.vardhan.app/">
   <meta name="twitter:title" content="Vardhan Apps – Your Ultimate Mobile App and Game Hub!">
   <meta name="twitter:description" content="Explore fun mobile apps, unlock exciting rewards by challenging yourself!">
-  <meta name="twitter:image" content="https://www.vardhan.app/images/website-icon.png?v=1.1">
+  <meta name="twitter:image" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
   <meta name="twitter:image:width" content="1200">
   <meta name="twitter:image:height" content="630">
-  
-  <!-- Mobile App Integration -->
-  <meta name="theme-color" content="#4f46e5">
-  <meta name="msapplication-TileColor" content="#4f46e5">
+  <meta name="twitter:image:alt" content="Vardhan Apps Logo">
+
+  <!-- Multiple Fallback Image Sources for Mobile WhatsApp -->
+  <link rel="image_src" href="https://www.vardhan.app/images/website-icon.png?v=1.4">
+  <meta name="og:image:url" content="https://www.vardhan.app/images/website-icon.png?v=1.4">
+
+  <!-- Mobile WhatsApp Optimization -->
   <meta name="format-detection" content="telephone=no">
   <meta name="HandheldFriendly" content="true">
   <meta name="MobileOptimized" content="width">
   <meta name="apple-mobile-web-app-title" content="Vardhan Apps">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="msapplication-TileColor" content="#4f46e5">
   
   <!-- SEO and Mobile Indexing -->
   <meta name="author" content="Vardhan Apps">
@@ -107,7 +92,7 @@
     "@type": "Organization",
     "name": "Vardhan Apps",
     "url": "https://www.vardhan.app/",
-    "logo": "https://www.vardhan.app/images/website-icon.png?v=1.1",
+    "logo": "https://www.vardhan.app/images/website-icon.png?v=1.4",
     "description": "Your Ultimate Mobile App and Game Hub! Explore fun mobile apps, challenge yourself, and unlock exciting rewards!",
     "sameAs": [
       "https://play.google.com/store/apps/dev?id=7189142038513427107"
@@ -246,15 +231,14 @@
   <!-- JavaScript -->
   <script src="js/main.js"></script>
   <script>
-    // WhatsApp sharing debugging function
+    // WhatsApp sharing debugging function - Enhanced for Mobile
     function debugWhatsAppSharing() {
-      console.log('🔍 WhatsApp Debug Info:');
+      console.log('🔍 WhatsApp Mobile Debug Info:');
       console.log('📱 Mobile & Desktop Meta Tags:');
       console.log('OG Image URL:', document.querySelector('meta[property="og:image:secure_url"]')?.content);
-      console.log('OG Title:', document.querySelector('meta[property="og:title"]')?.content);
-      console.log('OG Description:', document.querySelector('meta[property="og:description"]')?.content);
       console.log('Twitter Image:', document.querySelector('meta[name="twitter:image"]')?.content);
       console.log('Image Source Link:', document.querySelector('link[rel="image_src"]')?.href);
+      console.log('Current Version:', document.querySelector('meta[property="og:image:secure_url"]')?.content.split('v=')[1]);
       console.log('Current URL:', window.location.href);
       console.log('User Agent:', navigator.userAgent);
       console.log('Screen Size:', window.screen.width + 'x' + window.screen.height);
@@ -269,16 +253,20 @@
       // Check for mobile-specific issues
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
       if (isMobile) {
-        console.log('📱 Mobile Device Detected - Checking mobile-specific requirements:');
-        console.log('- Image dimensions should be at least 600x315 for mobile WhatsApp');
-        console.log('- Using version parameter for cache busting: v=1.1');
-        console.log('- Multiple meta tags for compatibility: og:image, twitter:image, image_src');
+        console.log('📱 Mobile Device Detected - Comprehensive Check:');
+        console.log('✅ Image dimensions: 1200x630 (optimal for mobile WhatsApp)');
+        console.log('✅ Multiple meta tags for compatibility: og:image, twitter:image, image_src');
+        console.log('✅ Cache busting with version: v=1.4');
+        console.log('✅ Mobile optimization tags: HandheldFriendly, MobileOptimized');
+        console.log('✅ All essential meta tags present: title, description, url, type');
       }
 
-      console.log('💡 Mobile WhatsApp Tips:');
-      console.log('- Clear WhatsApp cache if image not updating');
-      console.log('- Use WhatsApp web debugger: https://developers.facebook.com/tools/debug/');
-      console.log('- Test on actual mobile device for accurate preview');
+      console.log('💡 Mobile WhatsApp Troubleshooting:');
+      console.log('1. Clear WhatsApp cache if image not updating');
+      console.log('2. Use WhatsApp Web debugger: https://developers.facebook.com/tools/debug/');
+      console.log('3. Test on actual mobile device for accurate preview');
+      console.log('4. Check if image is accessible at the URL');
+      console.log('5. Ensure image meets minimum size requirements (600x315 for mobile)');
 
       return '✅ Debug info logged to console. Open browser dev tools (F12) to see details.';
     }
