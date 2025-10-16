@@ -39,6 +39,8 @@ const games = [
       'images/magic-square/screenshot3.png',
       'images/magic-square/screenshot4.png',
       'images/magic-square/screenshot5.png'
+	  'images/magic-square/screenshot6.png'
+	  'images/magic-square/screenshot7.png'
     ],
     icon: 'images/magic-square/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.rags.magicsquare&hl=en_IN',
